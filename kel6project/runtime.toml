@@ -1,0 +1,2 @@
+[install]
+requirements = "requirements.txt"  # Streamlit akan otomatis install packages
