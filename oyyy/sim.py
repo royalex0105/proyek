@@ -391,6 +391,5 @@ def main():
         st.session_state['username'] = ""
         st.rerun()
 
-# Jalankan langsung (tanpa if __name__ == "__main__")
 main()
 
