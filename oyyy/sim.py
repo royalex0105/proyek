@@ -359,16 +359,13 @@ def laporan():
 # ---------------- UI Utama ----------------
 
 def main():
-    st.set_page_config(layout="wide")  # Pastikan ada konfigurasi dasar
-   
-    # Logo kecil di header (ganti dengan URL/logo sendiri jika ada)
+    st.set_page_config(layout="wide")
     st.sidebar.title("Menu")
-    
+
     logged_in = login_register()
     if not logged_in:
         return
 
-    
     menu = st.sidebar.radio("Pilih Menu", ["Beranda", "Pemasukan", "Pengeluaran", "Laporan", "Logout"])
 
     if menu == "Beranda":
@@ -387,13 +384,13 @@ def main():
         pengeluaran()
 
     elif menu == "Laporan":
-        laporan() # Grafik Plotly hanya ada di fungsi laporan()
+        laporan()
 
     elif menu == "Logout":
         st.session_state['logged_in'] = False
         st.session_state['username'] = ""
         st.rerun()
 
-if __name__ == "__main__":
-    main()
+# Jalankan langsung (tanpa if __name__ == "__main__")
+main()
 
